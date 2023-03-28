@@ -16,7 +16,7 @@ namespace BigData.Operasyon
 
         public DataAccessLayer()
         {
-            con = new SqlConnection("data source = dataName; initial catalog = tableName; user Id = sa; password = *****;");
+            con = new SqlConnection("data source = DESKTOP-I299EIT\\SQLEXPRESS; initial catalog = BuyukDatalarIleCalismak; user Id = sa; password = 123456;");
         }
 
         public void BaglantiAyarla()
