@@ -49,5 +49,26 @@ namespace BigData.Operasyon
             dataAccessLayer.BaglantiAyarla();
             return kisi;
         }
+
+        public List<Kisi> KisilerListe()
+        {
+            List<Kisi> Kisiler = new List<Kisi>();
+            SqlDataReader reader = dataAccessLayer.KisilerListe();
+            while (reader.Read())
+            {
+                Kisiler.Add(new Kisi()
+                {
+                ID = reader.IsDBNull(0) ? 0 : reader.GetInt32(0),
+                Isim = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
+                Soyisim = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
+                EmailAdres = reader.IsDBNull(3) ? string.Empty : reader.GetString(3),
+                Tel = reader.IsDBNull(4) ? string.Empty : reader.GetString(4),
+                Resim = reader.IsDBNull(5) ? null : (byte[])reader[5]
+            });
+            }
+            reader.Close();
+            dataAccessLayer.BaglantiAyarla();
+            return Kisiler;
+        }
     }
 }

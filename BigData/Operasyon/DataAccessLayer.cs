@@ -54,8 +54,18 @@ namespace BigData.Operasyon
         {
             TryCatchKullan(() =>
             {
-                cmd = new SqlCommand("", con);
+                cmd = new SqlCommand("Select * from Kisiler where Id = @id", con);
                 cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                BaglantiAyarla();
+                reader = cmd.ExecuteReader();
+            });
+            return reader;
+        }
+        public SqlDataReader KisilerListe()
+        {
+            TryCatchKullan(() =>
+            {
+                cmd = new SqlCommand("Select * from Kisiler", con);
                 BaglantiAyarla();
                 reader = cmd.ExecuteReader();
             });
