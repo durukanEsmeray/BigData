@@ -51,6 +51,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtIsimKayitGoruntuleme = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.OFD = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbYeniKayitEkle)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -85,6 +86,7 @@
             this.btnKaydet.TabIndex = 10;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // btnResimEkle
             // 
@@ -94,6 +96,7 @@
             this.btnResimEkle.TabIndex = 9;
             this.btnResimEkle.Text = "Resim Ekle";
             this.btnResimEkle.UseVisualStyleBackColor = true;
+            this.btnResimEkle.Click += new System.EventHandler(this.btnResimEkle_Click);
             // 
             // ptbYeniKayitEkle
             // 
@@ -310,6 +313,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtIsimKayitGoruntuleme;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.OpenFileDialog OFD;
     }
 }
 

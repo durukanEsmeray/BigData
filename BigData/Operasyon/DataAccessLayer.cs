@@ -44,7 +44,7 @@ namespace BigData.Operasyon
                 cmd.Parameters.Add("@TelefonNumarasi", SqlDbType.NVarChar).Value = kisi.Tel;
                 cmd.Parameters.Add("@Resim", SqlDbType.VarBinary).Value = kisi.Resim;
                 BaglantiAyarla();
-                returnValue = cmd.ExecuteNonQuery(); // Proc e yazdığım sorguyu sql server a göndereceğim.
+               returnValue = cmd.ExecuteNonQuery(); // Proc e yazdığım sorguyu sql server a göndereceğim.
                 BaglantiAyarla();
             });
             return returnValue;
