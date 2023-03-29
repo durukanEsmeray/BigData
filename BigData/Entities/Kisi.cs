@@ -14,5 +14,9 @@ namespace BigData.Entities
         public string EmailAdres { get; set; }
         public string Tel { get; set; }
         public byte[] Resim { get; set; }
+        public override string ToString()
+        {
+            return Isim + " " + Soyisim;
+        }
     }
 }

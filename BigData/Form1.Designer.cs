@@ -196,6 +196,7 @@
             this.cmbKisiListesi.Name = "cmbKisiListesi";
             this.cmbKisiListesi.Size = new System.Drawing.Size(335, 24);
             this.cmbKisiListesi.TabIndex = 20;
+            this.cmbKisiListesi.SelectedIndexChanged += new System.EventHandler(this.cmbKisiListesi_SelectedIndexChanged);
             // 
             // ptbKayitGoruntuleme
             // 
